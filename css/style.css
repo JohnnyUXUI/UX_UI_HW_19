@@ -53,6 +53,10 @@ table {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 button {
     border: none;
     background-color: transparent;
@@ -151,6 +155,8 @@ nav ul li a:hover {
 header {
     color: #fff;
     background-color: #003554;
+    background: url('../images/header-bg.png')
+    no-repeat center center/cover;
 }
 
 header .container {
@@ -176,6 +182,17 @@ button {
 }
 
 button:hover {
+    background: #00A6FB;
+    color: #FFFFFF;
+}
+
+
+.hero-text button {
+    background: #003554;
+    color: #FFFFFF;
+}
+
+.hero-text button:hover {
     background: #00A6FB;
     color: #FFFFFF;
 }
@@ -668,3 +685,18 @@ footer ul li a:hover {
         margin: 24px 0;
     }
 }
+
+.bg {
+    z-index: -1;
+    filter: blur(0px);
+  }
+  
+  .loading-text {
+    position: absolute;
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    top: 3%;
+    left: 50%;
+    z-index: 99;
+  }

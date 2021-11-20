@@ -7,8 +7,35 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <script>
+            $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $("a").on('click', function(event) {
+            
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+            
+                  // Store hash
+                  var hash = this.hash;
+            
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 400, function(){
+            
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
+            });
+            </script>
     </head>
-    <body>
+    <body class="bg">
+        <div class="loading-text">0%</div>
         <header>
             <div class="container">
                 <nav>
@@ -23,7 +50,6 @@
                     <h1>Let's Create Something Amazing Together</h1>
                     <p>Hello there, I’m Johnny. I’m a designer from Canada that has a passion for creating great online experiences. As a designer, I’ve had the opportunity to work on a variety of projects from interactive websites to mobile apps.</p>
                     <div>
-                        <button><a href="#portfolio">View Portfolio</a></button>
                         <button><a href="#contact">Let's Connect</a></button>
                     </div>
                 </div>
@@ -113,5 +139,7 @@
             </div>
             <div class="clear-fix"></div>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
